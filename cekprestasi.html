@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cek prestasi</title>
+</head>
+<body>
+    <form action="" method="post" onsubmit="return false">
+    masukan nama <input type="text" id="nama"><br>
+    masukan nilai <input type="text" id="nilai"><br>
+    <button onclick="cek()">cek nilai</button>
+</form>
+<p id="hasil"></p>
+<script>
+    function cek() {
+       let nama = document.getElementById('nama').value
+       let nilai= document.getElementById('nilai').value
+    if (nilai > 90) {
+        document.getElementById('hasil').innerHTML = `${nama}, kamu dapat peringkat A`
+    }
+    else if (nilai > 80) {
+        document.getElementById('hasil').innerHTML = `${nama}, kamu dapat peringkat B`
+    } 
+    else if (nilai > 70) {
+        document.getElementById('hasil').innerHTML = `${nama}, kamu dapat perangkat C`
+    } 
+    else if (nilai > 60) {
+        document.getElementById('hasil').innerHTML = `${nama}, kamu dapat peringkat D`
+    } else  {
+        document.getElementById('hasil').innerHTML = `${nama}, kamu dapat peringkat E`}
+    }
+</script>
+</body>
+</html>

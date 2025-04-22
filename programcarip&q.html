@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mencati nilai p dan q</title>
+</head>
+<body>
+    <form action="" method="post" onsubmit="return false">
+        masukan x <input type="number" id="x"><br>
+        masukan y <input type="number" id="y"onchange="jumlahp()"><br>
+        </form>
+        <p id="p"></p>
+        <p id="q"></p>
+        <script>
+            function jumlahp() {
+           let x = parseInt(document.getElementById('x').value)
+           let y = parseInt(document.getElementById('y').value)
+           let p = x + y
+           document.getElementById('p').innerHTML = p
+           if (p >= 0) {
+               q = x * y
+           } else {
+            q = x / y
+           }
+           document.getElementById('q').innerHTML = q
+            }
+        
+        </script>
+</body>
+</html>
